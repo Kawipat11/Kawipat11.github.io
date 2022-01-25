@@ -1,20 +1,3 @@
-let btn = document.querySelector('#btn');
-let sidebar = document.querySelector('.sidebar');
-
-
-const media_query = window.matchMedia("(max-width: 1000px)");
-
-media_query.onchange = (evt) => { // เป็น function ที่จะเปลี่ยนไปตามที่ขนาดหน้าจอเราเปลี่ยนตามไปด้วย
-    if (media_query.matches) {
-        // less than 600px
-        // console.log('match')
-        sidebar.classList.remove('active');
-    }
-    else {
-        // more than 600px
-        sidebar.classList.add('active');
-    }
-}
 
 window.smoothScroll = function (target) {
     var scrollContainer = target;
@@ -40,21 +23,21 @@ window.smoothScroll = function (target) {
 }
 
 
-// active sidebar when scroll
-const sections = document.querySelector('.content .Home section');
-const sidebarli = document.querySelector('.sidebar.active .navlist li a');
-// console.log(sections)
-// console.log(sections)
-// for(i in sections){
-//     console.log(i)
-// }
-// window.addEventListener('scroll', () => {
-//     let current = '';
-//     sections.forEach(section => {
-//         const sectionTop = section.offsetTop;
-//         console.log(sectionTop)
-//     });
-// })
+//menu-width820
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    const links = document.getElementsByClassName('links');
+    for (i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function () {
+            document.getElementById("clickk").checked = false
+        })
+    }
+  } 
+}
+
+var x = window.matchMedia("(max-width: 820px)")
+myFunction(x) // Call listener function at run time
+x.addEventListener('change',myFunction)
 
 // Education 
 const educationBx = document.getElementsByClassName('educationBx');

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
-
+html {
+    scroll-behavior: smooth;
+        }
 */*{
     margin: 0px;
     padding: 0;
@@ -14,72 +16,13 @@ body{
     overflow: scroll;
 }
 
-
-@media screen and (min-width: 1000px){
-    .sidebar.active .logo_content .logo{
-        opacity: 1;
-        pointer-events: none;
-    }
-    .about_text{
-        font-size: smaller;
-    }
-    .home_text h1{
-        z-index: 100;
-        position: absolute;
-        color: white;
-        font-size: 30px;
-        font-weight: bold;
-        width: 100%;
-        /* left: 150px; */
-        left: 50%;
-        top: 40vh;
-        transform: translate(-50%, -50%);
-        letter-spacing: 10px;
-    }
-}
-
-
-
 /* section */
 section{
     top: 0px;
     left: 0px;
     right: 0px;
     width: 100%;
-    height: auto; /* หลังจากนี้จะไม่สามารใช้แค่ section ได้แล้ว เพราะว่าแต่ละ section จะต้องเปลี่ยนขนาดกันไป*/
-    /* align-items: center; */
-    /* display: flex; */
-    /* justify-content: center; */
-}
-
-.home_text h1{
-    z-index: 100;
-    position: absolute;
-    color: white;
-    font-size: 100px;
-    font-weight: bold;
-    width: 100%;
-    overflow: hidden;
-    /* left: 150px; */
-    left: 50%;
-    top: 40vh;
-    transform: translate(-50%, -50%);
-    letter-spacing: 10px;
-    transition: 0.5s;
-    transform-origin: left;
-}
-.home_text p{
-    z-index: 100;
-    position: absolute;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%;
-    /* left: 150px; */
-    left: 50%;
-    top: 65vh;
-    transform: translate(-50%, -50%);
-    letter-spacing: 10px;
+    height: auto; 
 }
 
 @keyframes transitionIn{
@@ -149,7 +92,7 @@ section{
 
 .head_sec{
     margin-left: 5%;
-    margin-top: 5%;
+    padding-top: 8%;
     letter-spacing: 3px;
 }
 .head_sec p{
@@ -561,7 +504,7 @@ section{
     display: flex;
     max-width: calc(100% - 200px);
     margin: 0 auto;
-    height: 70px;
+    height: 80px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -668,10 +611,7 @@ input[type="checkbox"]{
     display: none;
 }
 /* Responsive code start */
-@media screen and (max-width: 1250px){
-  nav .content2 .links{
-    margin-left: 30px;
-  }
+@media screen and (max-width: 1300px){
   .content2 .links li a{
     padding: 8px 13px;
   }
@@ -679,16 +619,17 @@ input[type="checkbox"]{
   .content2 {
     max-width: calc(100% - 50px);
   }
-
+  .about_text p{
+      font-size: 30px;
+  }
+  .educationBx.active .education_content {
+    width: 90%;
+}
 }
 
 @media screen and (max-width: 900px){
-  
-  nav #show-menu:checked ~ .content2 .links{
-    left: 0%;
-  }
   .content2 .links li a{
-      font-size: 15px;
+      font-size: 25px;
   }
   .content2 .links li a.desktop-link{
     display: none;
@@ -703,9 +644,9 @@ input[type="checkbox"]{
     }
     .content2 .links{
         position: fixed;
-        height: 100vh;
+        height: auto;
         width: 100%;
-        background: #323c4e;
+        background: #13355b;
         top: 70px;
         left: -100%;
         text-align: center;
@@ -715,15 +656,18 @@ input[type="checkbox"]{
     }
     .content2 .links li{
         width: 100%;
-        margin: 40px 0px;
+        /*margin: 10px 0px;*/
+        margin: 0px 0px;
     }
 
     .content2 .links li a{
         width: 100%;
         margin-left: -100%;
         display: block;
-        font-size: 20px;
+        font-size: 30px;
         transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        border: 1px solid lightblue
+        ;
     }
 
     #clickk:checked~.menu-btn i::before{
@@ -736,23 +680,57 @@ input[type="checkbox"]{
         left: 0px;
     }
 
+    .about_img {
+        width: auto;
+    }
+    .about_img img {
+        max-width: 30%;
+        text-align: center;
+    }
+    .about_text {
+        width: auto;
+        margin-left: 5%;
+    }
+    .about_text p,.resume_link .button,.head_sec p,.educationBx .education_label,
+    .educationBx.active .education_label,.educationBx .education_content,.educationBx.active .education_label::after,
+    .educationBx .education_label::after,.skills_set,.skills_name,.skills_proficiency{
+        font-size: 25px;
+    }
+    .head_sec h3{
+        font-size: 50px;
+    }
+    .educationBx.active .education_content {
+        height: 250px;
+    }
+    .resume_link{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px){
 
-
-@media screen and (max-width: 400px){
-  .wrapper nav{
-    padding: 0 10px;
-  }
-  .content2 .logo a{
-    font-size: 27px;
-  }
-  .wrapper .search-box{
-    max-width: calc(100% - 70px);
-  }
-  .wrapper .search-box .go-icon{
-    width: 30px;
-    right: 0;
-  }
-  .wrapper .search-box input{
-    padding-right: 30px;
-  }
-}}
+}
+@media screen and (max-width: 430px){
+    .content2 .logo a{
+        font-size: 40px;
+    }
+    .profile1_text span {
+        font-size: 40px;
+    }
+    .profile1_text p {
+        font-size: 25px;
+    }
+    .about_text p,.resume_link .button,.head_sec p,.educationBx .education_label,
+    .educationBx.active .education_label,.educationBx .education_content,.educationBx.active .education_label::after,
+    .educationBx .education_label::after,.skills_set,.skills_name,.skills_proficiency{
+        font-size: 20px;
+    }
+    .skills_name{
+        width: 60%;
+    }
+    .skills_proficiency{
+        width: 40%;
+    }
+    .head_sec h3{
+        font-size: 40px;
+    }
+}
