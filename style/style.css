@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
-
+html {
+    scroll-behavior: smooth;
+        }
 */*{
     margin: 0px;
     padding: 0;
@@ -14,72 +16,13 @@ body{
     overflow: scroll;
 }
 
-
-@media screen and (min-width: 1000px){
-    .sidebar.active .logo_content .logo{
-        opacity: 1;
-        pointer-events: none;
-    }
-    .about_text{
-        font-size: smaller;
-    }
-    .home_text h1{
-        z-index: 100;
-        position: absolute;
-        color: white;
-        font-size: 30px;
-        font-weight: bold;
-        width: 100%;
-        /* left: 150px; */
-        left: 50%;
-        top: 40vh;
-        transform: translate(-50%, -50%);
-        letter-spacing: 10px;
-    }
-}
-
-
-
 /* section */
 section{
     top: 0px;
     left: 0px;
     right: 0px;
     width: 100%;
-    height: auto; /* หลังจากนี้จะไม่สามารใช้แค่ section ได้แล้ว เพราะว่าแต่ละ section จะต้องเปลี่ยนขนาดกันไป*/
-    /* align-items: center; */
-    /* display: flex; */
-    /* justify-content: center; */
-}
-
-.home_text h1{
-    z-index: 100;
-    position: absolute;
-    color: white;
-    font-size: 100px;
-    font-weight: bold;
-    width: 100%;
-    overflow: hidden;
-    /* left: 150px; */
-    left: 50%;
-    top: 40vh;
-    transform: translate(-50%, -50%);
-    letter-spacing: 10px;
-    transition: 0.5s;
-    transform-origin: left;
-}
-.home_text p{
-    z-index: 100;
-    position: absolute;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100%;
-    /* left: 150px; */
-    left: 50%;
-    top: 65vh;
-    transform: translate(-50%, -50%);
-    letter-spacing: 10px;
+    height: auto; 
 }
 
 @keyframes transitionIn{
@@ -561,7 +504,7 @@ section{
     display: flex;
     max-width: calc(100% - 200px);
     margin: 0 auto;
-    height: 70px;
+    height: 80px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -683,12 +626,8 @@ input[type="checkbox"]{
 }
 
 @media screen and (max-width: 900px){
-  
-  nav #show-menu:checked ~ .content2 .links{
-    left: 0%;
-  }
   .content2 .links li a{
-      font-size: 15px;
+      font-size: 25px;
   }
   .content2 .links li a.desktop-link{
     display: none;
@@ -703,7 +642,7 @@ input[type="checkbox"]{
     }
     .content2 .links{
         position: fixed;
-        height: 100vh;
+        height: auto;
         width: 100%;
         background: #323c4e;
         top: 70px;
@@ -715,14 +654,14 @@ input[type="checkbox"]{
     }
     .content2 .links li{
         width: 100%;
-        margin: 40px 0px;
+        margin: 10px 0px;
     }
 
     .content2 .links li a{
         width: 100%;
         margin-left: -100%;
         display: block;
-        font-size: 20px;
+        font-size: 30px;
         transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
 
@@ -739,20 +678,9 @@ input[type="checkbox"]{
 
 
 @media screen and (max-width: 400px){
-  .wrapper nav{
-    padding: 0 10px;
-  }
+
   .content2 .logo a{
-    font-size: 27px;
+    font-size: 40px;
   }
-  .wrapper .search-box{
-    max-width: calc(100% - 70px);
-  }
-  .wrapper .search-box .go-icon{
-    width: 30px;
-    right: 0;
-  }
-  .wrapper .search-box input{
-    padding-right: 30px;
-  }
+  
 }}
