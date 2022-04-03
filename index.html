@@ -21,12 +21,12 @@
                 <i class="fas fa-bars" id="btn"></i>
             </label>
             <ul class="links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#">Feedback</a></li>
+              <li><a onclick="SmoothVerticalScrolling(document.getElementById('home'), 300)">Home</a></li>
+              <li><a onclick="SmoothVerticalScrolling(document.getElementById('about'), 300)">About</a></li>
+              <li><a onclick="SmoothVerticalScrolling(document.getElementById('education'), 300)">Education</a></li>
+              <li><a onclick="SmoothVerticalScrolling(document.getElementById('skills'), 300)">Skills</a></li>
+              <li><a onclick="SmoothVerticalScrolling(document.getElementById('experience'), 300)">Experience</a></li>
+              <li><a onclick="SmoothVerticalScrolling(document.getElementById('contact'),300)">Contact</a></li>
             </ul>
             
         </div>
@@ -51,7 +51,7 @@
     <section id="about">
         <div class="head_sec">
             <p>about me</p>
-            <h3>WHO AM I?</h3>
+            <h3>PERSONAL PROFILE</h3>
         </div>
         <!-- about me -->
         <div class="about_info">
@@ -59,14 +59,14 @@
                 <img src="image/tar_nisit.jpg" alt="">
             </div>
             <div class="about_text"><p> Hi,My name is Kawipat Dabtong. I'm currently a fourth-year Industrial Engineering student at 
-                Chulalongkorn University who interested in programming ,data science and data analyst which focuses 
+                Chulalongkorn University who's interested in programming data science, and data analysis which focuses 
                 on practice designing and building systems for collecting, storing, and analyzing data to make
                 data easily accessible and to optimize the organization's big data ecosystem. I believe that my
                 personalities included hard working ,fast learning and
                 humble could make an impact for the company</p>
                 <div class="resume_link">
                     <button type="button" class="button"
-                        onclick="NewTab('https://arjzxc000.github.io/Web%20Portfolio/Resume (16-09-2021).pdf')">Get
+                        onclick="NewTab('https://kawipat11.github.io/Resume_Kawipat.pdf')">Get
                         my
                         Resume</button>
                 </div>
@@ -196,30 +196,22 @@
             <h3>EXPERIENCE</h3>
         </div>
         <div class="experience_container">
-            <div class="experience_card">
-                <div class="experience_circle">
-                    <h2>Haup Car <br>(Jun 2021 - Present)</h2>
-                    <img src="image/haup_logo.jpg">
-                </div>
-                <div class="experience_content">
-                    <p><strong>HAUP is the first mobility sharing platform company in Thailand.</strong><br>
-                        As a data analyst intern, I interpret datasets and seek ways to accelerate the amount of
-                        demand by using machine learning, Graph convolution neural network, Long short-term
-                        memory, Python, and Power BI.</p>
+            <div class="educationBx">
+                <div class="education_label">KBank Internship 2021 (Jun 2021 - Aug 2021)</div>
+                
+                <div class="education_content">
+                    <strong>KBank is among Thailand’s largest banks</strong><br>
+                        As a kbank intern, I was involved in the development of chatbots to help the call center staff in answering customer questions, 
+                        by which I take part in designing the functionality of the chatbot then bring the information obtained to configure in the bank's chatbot system.<br><br>
                 </div>
             </div>
-            <div class="experience_card">
-                <div class="experience_circle">
-                    <h2>Slum Club <br>(Dec 2018 - Feb 2021)</h2>
-                    <img src="image/slum_club_logo.jpg">
-                </div>
-                <div class="experience_content">
-                    <p><strong>Slum club is volunteer club which focuses on teaching about 100 students by using
-                            growth
-                            mindset</strong><br>
-                        I joined this club as an attendant to teach students, who are far away from city towns
-                        and lack teachers and educational tool shortages. I taught them a growth mindset by
-                        doing activities, encourage and inspire them with a can-do attitude.</p>
+            <div class="educationBx">
+                <div class="education_label">Senior Project (Aug2021 - Present)</div>
+                
+                <div class="education_content">
+                    <strong>Senior project  of the bachelor's degree under the topic of 'Development of smartwatches platform for hospital use'</strong>
+                        <br>I developed a platform that is responsible for the transmission of biometric data 
+                        measured from the smartwatch between the patients who use the smartwatch and the hospital by using Kotlin and JAVA.<br><br>
                 </div>
             </div>
         </div>
@@ -228,51 +220,95 @@
             <h3>coursework project</h3>
         </div>
         <div class="experience_container">
-            <div class="experience_card">
-                <div class="experience_circle">
-                    <h2>Application Developing Project <br>(Nov 2019 - Dec 2019)</h2>
-                    <img src="image/haup_logo.jpg">
-                </div>
-                <div class="experience_content">
-                    <p><strong>HAUP is the first mobility sharing platform company in Thailand.</strong><br>
-- A project of course "Application Developing for Industrial
-Engineering"
-- Create " Picture Puzzle Game " using Visual Studio</p>
-                </div>
-            </div>
-            <div class="experience_card">
-                <div class="experience_circle">
-                    <h2>Slum Club <br>(Dec 2018 - Feb 2021)</h2>
-                    <img src="image/slum_club_logo.jpg">
-                </div>
-                <div class="experience_content">
-                    <p><strong>Slum club is volunteer club which focuses on teaching about 100 students by using
-                            growth
-                            mindset</strong><br>
-                        I joined this club as an attendant to teach students, who are far away from city towns
-                        and lack teachers and educational tool shortages. I taught them a growth mindset by
-                        doing activities, encourage and inspire them with a can-do attitude.</p>
+            <div class="educationBx">
+                <div class="education_label">Application Developing Project (Nov 2019 - Dec 2019)</div>
+                
+                <div class="education_content">
+                    <strong>A project of course "Application Developing for Industrial
+                        Engineering</strong>
+                    <br>- Create " Picture Puzzle Game " using C#<br>
+                    <a
+                    href="https://github.com/Kawipat11/Picture-Puzzle-Game"
+                    target="_blank">
+                    Click to see on github</a><br>
                 </div>
             </div>
-            <div class="experience_card">
-                <div class="experience_circle">
-                    <h2>Slum Club <br>(Dec 2018 - Feb 2021)</h2>
-                    <img src="image/slum_club_logo.jpg">
+            <div class="educationBx">
+                <div class="education_label">Statistical Project (Mar 2020 - Jul 2020)</div>
+                
+                <div class="education_content">
+                    <strong>A project of course "Engineering Statistics 2"</strong>
+                    <br>- Study Differences in the return on investment of each asset class
+                            using ANOVA<br><br>
                 </div>
-                <div class="experience_content">
-                    <p><strong>Slum club is volunteer club which focuses on teaching about 100 students by using
-                            growth
-                            mindset</strong><br>
-                        I joined this club as an attendant to teach students, who are far away from city towns
-                        and lack teachers and educational tool shortages. I taught them a growth mindset by
-                        doing activities, encourage and inspire them with a can-do attitude.</p>
+            </div>
+            <div class="educationBx">
+                <div class="education_label">Computer and Information Technology Project (Oct 2020 - Nov 2020)</div>
+                
+                <div class="education_content">
+                    <strong>A project of course "Computer and Information Technology "
+                    </strong>
+                    <br>Create and develop a dormitory website by using HTML,PHP and SQL<br>
+                    <a
+                    href="https://github.com/Kawipat11/dormitory-web_arj-gon-tar"
+                    target="_blank">
+                    Click to see on github</a><br>
                 </div>
             </div>
         </div>
-</div>
-</section>
 
-    
+        <div class="head_sec">
+            <h3>other project</h3>
+        </div>
+        <div class="experience_container">
+            <div class="educationBx">
+                <div class="education_label">Load, clean, and visualize project </div>
+                
+                <div class="education_content">
+                    load,clean and visualize Android app market data on datacamp project
+                    using python , pandas<br>
+                    <a
+                    href="https://github.com/Kawipat11/Project-The-Android-App-Market-on-Google-Play"
+                    target="_blank">
+                    Click to see on github</a><br>
+                </div>
+            </div>
+            <div class="educationBx">
+                <div class="education_label"> SQL project</div>
+                
+                <div class="education_content">
+                    clean and process data  from postgre sql table about a record of the articles published in the newspaper.<br>
+                    <a
+                    href="https://github.com/Kawipat11/Online-News_-SQL-Certification/blob/main/notebook.ipynb"
+                    target="_blank">
+                    Click to see on github</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="contact">
+        <div class="head_contact">
+            <p>GET IN TOUCH WITH ME</p>
+        </div>
+        <div class="text_contact">
+            <p>Feel free to contact me. Below are my social pages and my email:</p>
+        </div>
+        <div class="png_contact">
+            <a href="https://www.facebook.com/kawipat.dabtong" target="_blank">
+                <div class="icon icon-facebook"></div>
+            </a>
+
+            <a href="https://github.com/Kawipat11" target="_blank">
+                <div class="icon icon-github"></div>
+            </a>
+            
+            <a href="mailto:kawipat41@gmail.com">
+                <div class="icon icon-email"></div>
+            </a>
+        </div>
+    </section>
             
     <script src="style/script.js"></script>
 </body>
