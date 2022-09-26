@@ -180,14 +180,16 @@ section{
 .educationBx .education_content{
     position: relative;
     padding: 4px;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     transition: all .5s ease;
     font-size: 35px;
     width: 60%;
 }
 .educationBx.active .education_content{
-    height: 300px;
+    /* height: 300px; */
+    min-height: 300px;
+    max-height: 3000px;
     margin: 10px 5%;
     cursor: pointer;
 }
@@ -600,6 +602,9 @@ input[type="checkbox"]{
     .educationBx.active .education_content {
         height: 250px;
     }
+    .educationBx.active .education_content2 {
+        height: 500px;
+    }
     .resume_link{
         text-align: center;
     }
@@ -618,7 +623,7 @@ input[type="checkbox"]{
         font-size: 25px;
     }
     .about_text p,.resume_link .button,.head_sec p,.educationBx .education_label,
-    .educationBx.active .education_label,.educationBx .education_content,.educationBx.active .education_label::after,
+    .educationBx.active .education_label,.educationBx .education_content,.educationBx .education_content2,.educationBx.active .education_label::after,
     .educationBx .education_label::after,.skills_set,.skills_name,.skills_proficiency{
         font-size: 20px;
     }
